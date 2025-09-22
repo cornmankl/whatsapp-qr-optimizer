@@ -63,8 +63,8 @@ export async function GET(request: NextRequest) {
         }
         
         // Force QR generation
-        const forceResult = await manager.forceQRGeneration(qrSessionId)
-        if (forceResult) {
+        const forceQrResult = await manager.forceQRGeneration(qrSessionId)
+        if (forceQrResult) {
           return NextResponse.json({ 
             success: true, 
             message: 'QR code generation forced, waiting for QR code...'
