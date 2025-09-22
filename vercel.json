@@ -5,11 +5,21 @@
   "outputDirectory": ".next",
   "installCommand": "npm install",
   "functions": {
-    "app/**/*.{js,ts,tsx}": {
-      "maxDuration": 30
+    "src/app/api/**/*.{js,ts,tsx}": {
+      "maxDuration": 60
     },
     "api/**/*.{js,ts,tsx}": {
-      "maxDuration": 30
+      "maxDuration": 60
     }
-  }
+  },
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "regions": ["cle1"],
+  "rewrites": [
+    {
+      "source": "/api/(.*)",
+      "destination": "/api/$1"
+    }
+  ]
 }

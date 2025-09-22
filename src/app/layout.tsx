@@ -1,35 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+// Use local fonts or fallback fonts instead of Google Fonts for better reliability
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import "@/lib/initialize-websocket";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "WhatsApp QR Optimizer - AI-Powered WhatsApp Management",
+  description: "Modern Next.js application for WhatsApp QR code optimization and AI-powered messaging. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
+  keywords: ["WhatsApp", "QR Code", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
+  authors: [{ name: "WhatsApp QR Optimizer Team" }],
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "WhatsApp QR Optimizer",
+    description: "AI-powered WhatsApp management with modern React stack",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "WhatsApp QR Optimizer",
+    description: "AI-powered WhatsApp management with modern React stack",
   },
 };
 
@@ -41,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className="antialiased bg-background text-foreground font-sans"
       >
         {children}
         <Toaster />
