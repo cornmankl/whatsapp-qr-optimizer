@@ -14,6 +14,7 @@ import { Plus, Search, Brain, CheckCircle, FolderOpen, Clock, FileText, Calendar
 import KnowledgeGraph from '@/components/knowledge-graph/knowledge-graph'
 import WhatsAppBotManager from '@/components/whatsapp/whatsapp-bot-manager'
 import MagicBento from '@/components/ui/magic-bento'
+import BentoDashboard from '@/components/dashboard/bento-dashboard'
 
 interface SearchResult {
   id: string
@@ -258,149 +259,7 @@ export default function SecondBrain() {
 
           {/* Dashboard Tab */}
           <TabsContent value="dashboard" className="space-y-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Active Tasks</CardTitle>
-                  <CheckCircle className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">12</div>
-                  <p className="text-xs text-muted-foreground">3 due today</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Ideas Incubating</CardTitle>
-                  <Brain className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">24</div>
-                  <p className="text-xs text-muted-foreground">5 ready to develop</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Active Projects</CardTitle>
-                  <FolderOpen className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">3</div>
-                  <p className="text-xs text-muted-foreground">1 needs attention</p>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                  <CardTitle className="text-sm font-medium">Reviews Due</CardTitle>
-                  <Clock className="h-4 w-4 text-muted-foreground" />
-                </CardHeader>
-                <CardContent>
-                  <div className="text-2xl font-bold">8</div>
-                  <p className="text-xs text-muted-foreground">For spaced repetition</p>
-                </CardContent>
-              </Card>
-            </div>
-
-            {/* MagicBento Feature Showcase */}
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Sparkles className="h-5 w-5" />
-                  Advanced Features
-                </CardTitle>
-                <CardDescription>
-                  Experience the power of Second Brain with our cutting-edge features
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <div className="flex justify-center">
-                  <MagicBento 
-                    textAutoHide={true}
-                    enableStars={true}
-                    enableSpotlight={true}
-                    enableBorderGlow={true}
-                    enableTilt={true}
-                    clickEffect={true}
-                    enableMagnetism={true}
-                    spotlightRadius={300}
-                    particleCount={12}
-                    glowColor="132, 0, 255"
-                  />
-                </div>
-              </CardContent>
-            </Card>
-
-            {/* Recent Activity */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Recent Tasks</CardTitle>
-                  <CardDescription>Your latest task updates</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">Complete project proposal</p>
-                      <p className="text-xs text-muted-foreground">Due in 2 hours</p>
-                    </div>
-                    <Badge variant="secondary">High</Badge>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-yellow-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">Review documentation</p>
-                      <p className="text-xs text-muted-foreground">In progress</p>
-                    </div>
-                    <Badge variant="outline">Medium</Badge>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">Research new technologies</p>
-                      <p className="text-xs text-muted-foreground">Due tomorrow</p>
-                    </div>
-                    <Badge variant="outline">Low</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card>
-                <CardHeader>
-                  <CardTitle>Ideas Incubating</CardTitle>
-                  <CardDescription>Concepts developing in your second brain</CardDescription>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <div className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-purple-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">AI-powered task automation</p>
-                      <p className="text-xs text-muted-foreground">3 days old</p>
-                    </div>
-                    <Badge variant="secondary">Idea</Badge>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">Knowledge graph visualization</p>
-                      <p className="text-xs text-muted-foreground">1 week old</p>
-                    </div>
-                    <Badge variant="outline">Insight</Badge>
-                  </div>
-                  <div className="flex items-center space-x-4">
-                    <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
-                    <div className="flex-1">
-                      <p className="text-sm font-medium">Mobile app design patterns</p>
-                      <p className="text-xs text-muted-foreground">2 weeks old</p>
-                    </div>
-                    <Badge variant="outline">Reference</Badge>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <BentoDashboard />
           </TabsContent>
 
           {/* Tasks Tab */}
