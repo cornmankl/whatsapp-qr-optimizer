@@ -1,0 +1,230 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  notes      Note[]
+  tasks      Task[]
+  projects   Project[]
+  tags       Tag[]
+  spacedReps SpacedRep[]
+}
+
+model Note {
+  id          String   @id @default(cuid())
+  title       String
+  content     String?
+  type        NoteType @default(IDEA)
+  status      NoteStatus @default(DRAFT)
+  priority    Priority @default(MEDIUM)
+  userId      String
+  mediaUrl    String?
+  mediaType   String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tags        NoteTag[]
+  projects    ProjectNote[]
+  links       NoteLink[]   @relation("NoteLinksFrom")
+  linkedFrom  NoteLink[]   @relation("NoteLinksTo")
+}
+
+model Task {
+  id          String     @id @default(cuid())
+  title       String
+  description String?
+  status      TaskStatus @default(TODO)
+  priority    Priority   @default(MEDIUM)
+  dueDate     DateTime?
+  userId      String
+  projectId   String?
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  project     Project? @relation(fields: [projectId], references: [id])
+  tags        TaskTag[]
+}
+
+model Project {
+  id          String       @id @default(cuid())
+  name        String
+  description String?
+  status      ProjectStatus @default(PLANNING)
+  priority    Priority     @default(MEDIUM)
+  startDate   DateTime?
+  endDate     DateTime?
+  userId      String
+  createdAt   DateTime     @default(now())
+  updatedAt   DateTime     @updatedAt
+
+  user        User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+  tasks       Task[]
+  notes       ProjectNote[]
+  tags        ProjectTag[]
+}
+
+model Tag {
+  id        String   @id @default(cuid())
+  name      String   @unique
+  color     String?
+  userId    String
+  createdAt DateTime @default(now())
+
+  user      User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  notes     NoteTag[]
+  tasks     TaskTag[]
+  projects  ProjectTag[]
+}
+
+model NoteTag {
+  noteId String
+  tagId  String
+
+  note Note @relation(fields: [noteId], references: [id], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([noteId, tagId])
+}
+
+model TaskTag {
+  taskId String
+  tagId  String
+
+  task Task @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  tag  Tag  @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([taskId, tagId])
+}
+
+model ProjectTag {
+  projectId String
+  tagId     String
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  tag     Tag     @relation(fields: [tagId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, tagId])
+}
+
+model ProjectNote {
+  projectId String
+  noteId    String
+
+  project Project @relation(fields: [projectId], references: [id], onDelete: Cascade)
+  note    Note    @relation(fields: [noteId], references: [id], onDelete: Cascade)
+
+  @@id([projectId, noteId])
+}
+
+model NoteLink {
+  id        String   @id @default(cuid())
+  fromNoteId String
+  toNoteId   String
+  type      LinkType @default(RELATED)
+  createdAt DateTime @default(now())
+
+  fromNote Note @relation("NoteLinksFrom", fields: [fromNoteId], references: [id], onDelete: Cascade)
+  toNote   Note @relation("NoteLinksTo", fields: [toNoteId], references: [id], onDelete: Cascade)
+}
+
+model SpacedRep {
+  id          String           @id @default(cuid())
+  title       String
+  content     String
+  type        SpacedRepType    @default(QUESTION)
+  difficulty  Int              @default(3)
+  interval    Int              @default(1)
+  easeFactor  Float            @default(2.5)
+  nextReview  DateTime
+  reviewCount Int              @default(0)
+  userId      String
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  user        User             @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviews     SpacedRepReview[]
+}
+
+model SpacedRepReview {
+  id           String   @id @default(cuid())
+  spacedRepId  String
+  quality      Int
+  easeFactor   Float
+  interval     Int
+  nextReview   DateTime
+  reviewTime   Int
+  createdAt    DateTime @default(now())
+
+  spacedRep SpacedRep @relation(fields: [spacedRepId], references: [id], onDelete: Cascade)
+}
+
+enum NoteType {
+  IDEA
+  NOTE
+  REFERENCE
+  INSIGHT
+  QUESTION
+}
+
+enum NoteStatus {
+  DRAFT
+  ACTIVE
+  ARCHIVED
+  INCUBATING
+}
+
+enum TaskStatus {
+  TODO
+  IN_PROGRESS
+  DONE
+  CANCELLED
+}
+
+enum ProjectStatus {
+  PLANNING
+  ACTIVE
+  ON_HOLD
+  COMPLETED
+  CANCELLED
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+  URGENT
+}
+
+enum LinkType {
+  RELATED
+  DEPENDS_ON
+  SUPPORTS
+  CONTRADICTS
+  EXTENDS
+}
+
+enum SpacedRepType {
+  QUESTION
+  FACT
+  CONCEPT
+  PROCEDURE
+}
