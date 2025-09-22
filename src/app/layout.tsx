@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 // Use local fonts or fallback fonts instead of Google Fonts for better reliability
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
-import "@/lib/initialize-websocket";
 
 export const metadata: Metadata = {
   title: "WhatsApp QR Optimizer - AI-Powered WhatsApp Management",

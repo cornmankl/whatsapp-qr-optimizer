@@ -1,10 +1,33 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 📱 WhatsApp QR Optimizer
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+A modern, AI-powered WhatsApp management application built with Next.js, designed to optimize WhatsApp QR code handling and messaging automation.
+
+## ✨ Features
+
+- **📱 WhatsApp QR Management** - Generate, manage, and optimize WhatsApp QR codes
+- **🤖 AI-Powered Messaging** - Intelligent message handling with Z.ai integration  
+- **📋 Task Management** - Comprehensive task and project management system
+- **📝 Note Taking** - Advanced note-taking with AI assistance
+- **🔄 Real-time Updates** - Live QR code updates and connection status
+- **📊 Analytics Dashboard** - Comprehensive insights and statistics
+
+## 🚀 Quick Deploy to Vercel
+
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/cornmankl/whatsapp-qr-optimizer)
+
+### Prerequisites for Deployment
+1. **PostgreSQL Database** - Set up with [Neon](https://neon.tech), [Supabase](https://supabase.com), or [PlanetScale](https://planetscale.com)
+2. **Environment Variables** - Configure the following in Vercel:
+   ```bash
+   DATABASE_URL=your_postgresql_connection_string
+   NODE_ENV=production
+   ```
+
+For detailed deployment instructions, see [DEPLOYMENT.md](./DEPLOYMENT.md).
 
 ## ✨ Technology Stack
 
-This scaffold provides a robust foundation built with:
+This application provides a robust foundation built with:
 
 ### 🎯 Core Framework
 - **⚡ Next.js 15** - The React framework for production with App Router
