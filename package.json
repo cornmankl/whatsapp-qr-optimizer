@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "nodemon --exec \"npx tsx server.ts\" --watch server.ts --watch src --ext ts,tsx,js,jsx 2>&1 | tee dev.log",
-    "build": "next build",
+    "build": "prisma generate && next build",
     "start": "NODE_ENV=production tsx server.ts 2>&1 | tee server.log",
     "lint": "next lint",
     "db:push": "prisma db push",
@@ -90,6 +90,7 @@
     "tsx": "^4.20.3",
     "uuid": "^11.1.0",
     "vaul": "^1.1.2",
+    "vercel": "^48.1.0",
     "z-ai-web-dev-sdk": "^0.0.10",
     "zod": "^4.0.2",
     "zustand": "^5.0.6"
