@@ -15,21 +15,21 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Z.ai Code Scaffold - AI-Powered Development",
-  description: "Modern Next.js scaffold optimized for AI-powered development with Z.ai. Built with TypeScript, Tailwind CSS, and shadcn/ui.",
-  keywords: ["Z.ai", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "AI development", "React"],
-  authors: [{ name: "Z.ai Team" }],
+  title: "WhatsApp Second Brain - AI-Powered Knowledge Management",
+  description: "Comprehensive Second Brain knowledge management system with WhatsApp Bot Integration. Capture, organize, and interact with your thoughts, tasks, and projects through an intelligent WhatsApp interface.",
+  keywords: ["whatsapp", "bot", "knowledge management", "second brain", "AI", "Next.js", "TypeScript", "Tailwind CSS", "shadcn/ui", "productivity"],
+  authors: [{ name: "cornmankl" }],
   openGraph: {
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
-    url: "https://chat.z.ai",
-    siteName: "Z.ai",
+    title: "WhatsApp Second Brain",
+    description: "AI-powered knowledge management with WhatsApp bot integration",
+    url: "https://github.com/cornmankl/whatsapp-qr-optimizer",
+    siteName: "WhatsApp Second Brain",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Z.ai Code Scaffold",
-    description: "AI-powered development with modern React stack",
+    title: "WhatsApp Second Brain",
+    description: "AI-powered knowledge management with WhatsApp bot integration",
   },
 };
 

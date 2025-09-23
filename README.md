@@ -1,141 +1,256 @@
-# 🚀 Welcome to Z.ai Code Scaffold
+# 🧠 WhatsApp Second Brain - AI-Powered Knowledge Management System
 
-A modern, production-ready web application scaffold powered by cutting-edge technologies, designed to accelerate your development with [Z.ai](https://chat.z.ai)'s AI-powered coding assistance.
+A comprehensive **Second Brain** knowledge management system with **WhatsApp Bot Integration**, designed to help you capture, organize, and interact with your thoughts, tasks, and projects through an intelligent WhatsApp interface.
 
-## ✨ Technology Stack
+## 🌟 What is this project?
 
-This scaffold provides a robust foundation built with:
+This is an advanced **Personal Knowledge Management System** (Second Brain) that combines:
+- **📱 WhatsApp Bot Integration** - Manage your knowledge through WhatsApp messages
+- **🧠 AI-Powered Assistance** - Smart content generation and insights
+- **📊 Interactive Dashboard** - Beautiful Bento-style dashboard for data visualization
+- **🌐 Knowledge Graph** - Visual representation of connections between your ideas
+- **⚡ Real-time Sync** - Instant updates via WebSocket connections
+- **🎯 Spaced Repetition Learning** - Built-in learning system for knowledge retention
 
-### 🎯 Core Framework
-- **⚡ Next.js 15** - The React framework for production with App Router
-- **📘 TypeScript 5** - Type-safe JavaScript for better developer experience
-- **🎨 Tailwind CSS 4** - Utility-first CSS framework for rapid UI development
+## ✨ Core Features
 
-### 🧩 UI Components & Styling
-- **🧩 shadcn/ui** - High-quality, accessible components built on Radix UI
-- **🎯 Lucide React** - Beautiful & consistent icon library
-- **🌈 Framer Motion** - Production-ready motion library for React
-- **🎨 Next Themes** - Perfect dark mode in 2 lines of code
+### 📱 WhatsApp Bot Integration
+- **QR Code Optimization** - Fast WhatsApp connection with optimized QR generation
+- **Natural Language Commands** - Control your knowledge base through WhatsApp messages
+- **Bilingual Support** - Commands in English and Bahasa Malaysia
+- **Smart Notifications** - Get reminders and updates directly on WhatsApp
+- **Real-time Sync** - Instant synchronization between web app and WhatsApp
 
-### 📋 Forms & Validation
-- **🎣 React Hook Form** - Performant forms with easy validation
-- **✅ Zod** - TypeScript-first schema validation
+### 🧠 Knowledge Management
+- **📝 Notes System** - Capture ideas, references, and insights
+- **✅ Task Management** - Create and track tasks with priorities and due dates
+- **🚀 Project Organization** - Manage projects with linked notes and tasks
+- **🏷️ Smart Tagging** - AI-powered tag suggestions and organization
+- **🔗 Bi-directional Links** - Connect related notes and ideas
+- **📈 Spaced Repetition** - Learn and retain information effectively
 
-### 🔄 State Management & Data Fetching
-- **🐻 Zustand** - Simple, scalable state management
-- **🔄 TanStack Query** - Powerful data synchronization for React
-- **🌐 Axios** - Promise-based HTTP client
+### 🤖 AI Integration
+- **💬 AI Chat Assistant** - Intelligent conversation about your knowledge base
+- **📊 Content Generation** - AI-powered content creation and summarization
+- **🏷️ Auto-tagging** - Automatic tag generation for content
+- **🔍 Smart Search** - AI-enhanced search across all your content
+- **💡 Insights** - AI-generated insights and connections
 
-### 🗄️ Database & Backend
-- **🗄️ Prisma** - Next-generation Node.js and TypeScript ORM
-- **🔐 NextAuth.js** - Complete open-source authentication solution
+### 📊 Dashboard & Visualization
+- **🎨 Bento Dashboard** - Modern, card-based interface
+- **🌐 Knowledge Graph** - Interactive network visualization of your knowledge
+- **📈 Analytics** - Track your productivity and learning progress
+- **🔔 Notifications** - Stay updated with important events
 
-### 🎨 Advanced UI Features
-- **📊 TanStack Table** - Headless UI for building tables and datagrids
-- **🖱️ DND Kit** - Modern drag and drop toolkit for React
-- **📊 Recharts** - Redefined chart library built with React and D3
-- **🖼️ Sharp** - High performance image processing
+## 🛠️ Technology Stack
 
-### 🌍 Internationalization & Utilities
-- **🌍 Next Intl** - Internationalization library for Next.js
-- **📅 Date-fns** - Modern JavaScript date utility library
-- **🪝 ReactUse** - Collection of essential React hooks for modern development
+### 🏗️ Frontend & Framework
+- **⚡ Next.js 15** - React framework with App Router
+- **🔷 TypeScript** - Full type safety
+- **🎨 Tailwind CSS** - Utility-first CSS framework
+- **🎭 shadcn/ui** - Modern, accessible UI components
+- **🎬 Framer Motion** - Smooth animations and transitions
 
-## 🎯 Why This Scaffold?
+### 🗄️ Backend & Database
+- **🗄️ Prisma** - Type-safe ORM with SQLite database
+- **📡 Socket.IO** - Real-time WebSocket communication
+- **🔌 Custom Server** - Node.js server with Next.js integration
+- **🌐 RESTful APIs** - Comprehensive API endpoints
 
-- **🏎️ Fast Development** - Pre-configured tooling and best practices
-- **🎨 Beautiful UI** - Complete shadcn/ui component library with advanced interactions
-- **🔒 Type Safety** - Full TypeScript configuration with Zod validation
-- **📱 Responsive** - Mobile-first design principles with smooth animations
-- **🗄️ Database Ready** - Prisma ORM configured for rapid backend development
-- **🔐 Auth Included** - NextAuth.js for secure authentication flows
-- **📊 Data Visualization** - Charts, tables, and drag-and-drop functionality
-- **🌍 i18n Ready** - Multi-language support with Next Intl
-- **🚀 Production Ready** - Optimized build and deployment settings
-- **🤖 AI-Friendly** - Structured codebase perfect for AI assistance
+### 📱 WhatsApp Integration
+- **📱 @whiskeysockets/baileys** - WhatsApp Web API
+- **📱 QR Code Generation** - Optimized connection process
+- **🔔 Real-time Notifications** - Instant message delivery
+- **💾 Session Management** - Persistent WhatsApp sessions
+
+### 🤖 AI & Intelligence
+- **🧠 Z.ai SDK** - AI-powered development and content generation
+- **🔍 Semantic Search** - Intelligent content discovery
+- **📊 Content Analysis** - AI-driven insights and summarization
+- **🏷️ Auto-categorization** - Smart content organization
+
+### 🎨 UI & UX Libraries
+- **📊 Recharts** - Data visualization and charts
+- **🖱️ DND Kit** - Drag and drop functionality
+- **📋 TanStack Table** - Advanced data tables
+- **📋 React Hook Form** - Form management with Zod validation
+- **🎯 Lucide React** - Beautiful icons
+- **🍞 Sonner** - Toast notifications
 
 ## 🚀 Quick Start
 
-```bash
-# Install dependencies
-npm install
+### Prerequisites
+- Node.js 18+ 
+- npm/yarn/pnpm
 
-# Start development server
-npm run dev
+### Installation
 
-# Build for production
-npm run build
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/cornmankl/whatsapp-qr-optimizer.git
+   cd whatsapp-qr-optimizer
+   ```
 
-# Start production server
-npm start
-```
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) to see your application running.
+3. **Set up the database**
+   ```bash
+   npm run db:generate
+   npm run db:push
+   ```
 
-## 🤖 Powered by Z.ai
+4. **Start the development server**
+   ```bash
+   npm run dev
+   ```
 
-This scaffold is optimized for use with [Z.ai](https://chat.z.ai) - your AI assistant for:
+5. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-- **💻 Code Generation** - Generate components, pages, and features instantly
-- **🎨 UI Development** - Create beautiful interfaces with AI assistance  
-- **🔧 Bug Fixing** - Identify and resolve issues with intelligent suggestions
-- **📝 Documentation** - Auto-generate comprehensive documentation
-- **🚀 Optimization** - Performance improvements and best practices
+## 📱 WhatsApp Bot Setup
 
-Ready to build something amazing? Start chatting with Z.ai at [chat.z.ai](https://chat.z.ai) and experience the future of AI-powered development!
+### Quick Setup
+1. Open the application dashboard
+2. Navigate to the "WhatsApp Bot" tab
+3. Click "Generate QR Code"
+4. Scan the QR code with WhatsApp (Settings → Linked Devices → Link a Device)
+5. Start sending commands to your bot!
 
-## 📁 Project Structure
+### Available WhatsApp Commands
+
+#### 📝 Note Commands
+- `note create [title] - [content]` - Create a new note
+- `catatan create [title] - [content]` - Create note (Bahasa Malaysia)
+- `note list` - List all notes
+- `catatan list` - List notes (Bahasa Malaysia)
+
+#### ✅ Task Commands
+- `task create [title] - [description]` - Create a new task
+- `tugas create [title] - [description]` - Create task (Bahasa Malaysia)
+- `task list` - List all tasks
+- `task complete [id]` - Mark task as complete
+
+#### 🚀 Project Commands
+- `project create [name] - [description]` - Create a new project
+- `projek create [name] - [description]` - Create project (Bahasa Malaysia)
+- `project list` - List active projects
+
+#### 🔍 Search Commands
+- `search [keywords]` - Search across all content
+- `cari [keywords]` - Search (Bahasa Malaysia)
+
+#### 🤖 AI Commands
+- `ai [question]` - Ask AI about your knowledge base
+- `help` - Show all available commands
+
+## 📊 Project Structure
 
 ```
 src/
-├── app/                 # Next.js App Router pages
-├── components/          # Reusable React components
-│   └── ui/             # shadcn/ui components
-├── hooks/              # Custom React hooks
-└── lib/                # Utility functions and configurations
+├── app/                          # Next.js App Router
+│   ├── api/                      # API endpoints
+│   │   ├── ai/                   # AI-related endpoints
+│   │   ├── notes/                # Notes CRUD operations
+│   │   ├── tasks/                # Task management
+│   │   ├── projects/             # Project management
+│   │   ├── whatsapp/             # WhatsApp bot endpoints
+│   │   └── whatsapp-qr/          # QR code generation
+│   ├── page.tsx                  # Main application page
+│   └── layout.tsx                # App layout and metadata
+├── components/                   # React components
+│   ├── ai/                       # AI assistant components
+│   ├── dashboard/                # Dashboard components
+│   ├── knowledge-graph/          # Graph visualization
+│   ├── whatsapp/                 # WhatsApp bot UI
+│   └── ui/                       # shadcn/ui components
+├── lib/                          # Utility libraries
+│   ├── whatsapp/                 # WhatsApp bot logic
+│   ├── db.ts                     # Database configuration
+│   ├── socket.ts                 # WebSocket setup
+│   └── notifications.ts          # Notification service
+└── hooks/                        # Custom React hooks
+
+prisma/
+└── schema.prisma                 # Database schema
+
+server.ts                         # Custom Next.js server with Socket.IO
 ```
 
-## 🎨 Available Features & Components
+## 🗄️ Database Schema
 
-This scaffold includes a comprehensive set of modern web development tools:
+The application uses **Prisma** with **SQLite** for data persistence:
 
-### 🧩 UI Components (shadcn/ui)
-- **Layout**: Card, Separator, Aspect Ratio, Resizable Panels
-- **Forms**: Input, Textarea, Select, Checkbox, Radio Group, Switch
-- **Feedback**: Alert, Toast (Sonner), Progress, Skeleton
-- **Navigation**: Breadcrumb, Menubar, Navigation Menu, Pagination
-- **Overlay**: Dialog, Sheet, Popover, Tooltip, Hover Card
-- **Data Display**: Badge, Avatar, Calendar
+- **Users** - User management and authentication
+- **Notes** - Knowledge base entries with types (IDEA, NOTE, REFERENCE, INSIGHT, QUESTION)
+- **Tasks** - Task management with status tracking
+- **Projects** - Project organization with linked notes and tasks
+- **Tags** - Content categorization and organization
+- **SpacedRep** - Spaced repetition learning system
+- **Links** - Bi-directional note connections
 
-### 📊 Advanced Data Features
-- **Tables**: Powerful data tables with sorting, filtering, pagination (TanStack Table)
-- **Charts**: Beautiful visualizations with Recharts
-- **Forms**: Type-safe forms with React Hook Form + Zod validation
+## 🔧 Configuration
 
-### 🎨 Interactive Features
-- **Animations**: Smooth micro-interactions with Framer Motion
-- **Drag & Drop**: Modern drag-and-drop functionality with DND Kit
-- **Theme Switching**: Built-in dark/light mode support
+### Environment Variables
+Create a `.env.local` file with:
+```env
+DATABASE_URL="file:./dev.db"
+NEXTAUTH_SECRET="your-secret-key"
+```
 
-### 🔐 Backend Integration
-- **Authentication**: Ready-to-use auth flows with NextAuth.js
-- **Database**: Type-safe database operations with Prisma
-- **API Client**: HTTP requests with Axios + TanStack Query
-- **State Management**: Simple and scalable with Zustand
+### WhatsApp Bot Configuration
+- Session data stored in `whatsapp-sessions/` directory
+- QR codes automatically generated and cached
+- Support for multiple concurrent sessions
+- Real-time connection status via WebSocket
 
-### 🌍 Production Features
-- **Internationalization**: Multi-language support with Next Intl
-- **Image Optimization**: Automatic image processing with Sharp
-- **Type Safety**: End-to-end TypeScript with Zod validation
-- **Essential Hooks**: 100+ useful React hooks with ReactUse for common patterns
+## 🤖 AI Features
 
-## 🤝 Get Started with Z.ai
+### Content Generation
+- **Smart Summaries** - AI-generated content summaries
+- **Tag Suggestions** - Intelligent tag recommendations
+- **Content Enhancement** - AI-powered content improvement
 
-1. **Clone this scaffold** to jumpstart your project
-2. **Visit [chat.z.ai](https://chat.z.ai)** to access your AI coding assistant
-3. **Start building** with intelligent code generation and assistance
-4. **Deploy with confidence** using the production-ready setup
+### Chat Assistant
+- **Context-Aware** - Understands your knowledge base
+- **Multi-turn Conversations** - Maintains conversation context
+- **Knowledge Integration** - Answers based on your personal data
+
+## 📈 Performance Optimizations
+
+### WhatsApp QR Code Optimization
+- **Instant QR Generation** - Optimized for speed (< 3 seconds)
+- **Automatic Retry Logic** - Smart error handling and recovery
+- **Connection Caching** - Persistent session management
+- **Real-time Updates** - WebSocket-based status updates
+
+### Application Performance
+- **Server-Side Rendering** - Fast initial page loads
+- **Real-time Sync** - WebSocket integration for instant updates
+- **Optimized Queries** - Efficient database operations with Prisma
+- **Component Lazy Loading** - Reduced bundle sizes
+
+## 🔮 Future Enhancements
+
+- **📱 Mobile App** - Native mobile applications
+- **🔄 Multi-platform Sync** - Telegram, Discord bot integration
+- **📊 Advanced Analytics** - Detailed productivity insights
+- **🌍 Cloud Sync** - Multi-device synchronization
+- **🎙️ Voice Notes** - Audio note support
+- **📸 Image Recognition** - OCR and image analysis
+- **🔗 External Integrations** - Notion, Obsidian import/export
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit pull requests or open issues for bugs and feature requests.
+
+## 📄 License
+
+This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ for the developer community. Supercharged by [Z.ai](https://chat.z.ai) 🚀
+**Built with ❤️ for knowledge workers and lifelong learners.**
+*Powered by WhatsApp Bot Integration and AI Intelligence* 🤖📱
